@@ -1,0 +1,218 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Interview Movies",
+    "dateExported": "2023-10-24T08:30:25.907Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "968db13a-e8a6-42c3-88b3-4f2e47391810",
+            "name": "Users",
+            "containerId": "",
+            "created": "2023-10-24T08:03:06.894Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "4f5f4e39-95a1-44ad-83bc-7eab13c2e79c",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2023-10-24T08:03:10.342Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "609265dd-d09b-4f46-bdff-6dbfcb234dce",
+            "name": "Movies",
+            "containerId": "",
+            "created": "2023-10-24T08:03:15.054Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "808065f2-e624-42eb-a424-3654ec36c16d",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "968db13a-e8a6-42c3-88b3-4f2e47391810",
+            "name": "/",
+            "url": "{{url}}/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-24T08:03:19.278Z",
+            "modified": "2023-10-24T08:05:46.338Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Aman Raj\",\n  \"email\": \"aman@test.com\",\n  \"password\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e95ca4a0-4858-4461-a80d-ee1ad70c27a9",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "968db13a-e8a6-42c3-88b3-4f2e47391810",
+            "name": "/",
+            "url": "{{url}}/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-24T08:04:24.286Z",
+            "modified": "2023-10-24T08:06:05.674Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhakB0ZXN0LmNvbSIsImhhc2giOiI4YjE3MjAzYTI2IiwiaWF0IjoxNjk4MTM0NzA1fQ.1BAklnHFWmZemukGBxRUTYJ2riQHjI3YTCNFe5QoMkA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "305f7bdd-8aa6-4c89-bb3a-25e639cc96c9",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "4f5f4e39-95a1-44ad-83bc-7eab13c2e79c",
+            "name": "/login",
+            "url": "{{url}}/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-24T08:04:37.828Z",
+            "modified": "2023-10-24T08:20:43.285Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"aman@test.com\",\n  \"password\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1dcd34be-65b9-4ec5-be1e-c3dcb7b3b455",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "968db13a-e8a6-42c3-88b3-4f2e47391810",
+            "name": "/",
+            "url": "{{url}}/users",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-10-24T08:06:30.632Z",
+            "modified": "2023-10-24T08:08:26.507Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Raj Aryan\",\n  \"_email\": \"raj@test.com\",\n  \"_password\": \"123\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhakB0ZXN0LmNvbSIsImhhc2giOiI4YjE3MjAzYTI2IiwiaWF0IjoxNjk4MTM0ODk3fQ.DnkW4i_rI63_50NfaTLO3r2YD3HkrBFnEK4rcx1Ilpk"
+            },
+            "tests": []
+        },
+        {
+            "_id": "16f6002f-ee32-48a3-96fa-98b8e4e5ac0a",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "609265dd-d09b-4f46-bdff-6dbfcb234dce",
+            "name": "/",
+            "url": "{{url}}/movies",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-24T08:08:43.837Z",
+            "modified": "2023-10-24T08:23:22.797Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": " {\r\n    \"name\": \"Hidden Realms\",\r\n    \"rating\": 7.6,\r\n    \"casts\": [\"Scarlett Johansson\", \"Tom Hardy\", \"Liam Hemsworth\"],\r\n    \"genre\": \"Fantasy/Adventure\",\r\n    \"releasedAt\": \"2022-04-07\"\r\n  }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a01c6d8-f784-4060-a65a-7b69070216aa",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "609265dd-d09b-4f46-bdff-6dbfcb234dce",
+            "name": "/:movieId",
+            "url": "{{url}}/movies/65377ed9957a50d2e91b75da",
+            "method": "GET",
+            "sortNum": 45000,
+            "created": "2023-10-24T08:27:00.847Z",
+            "modified": "2023-10-24T08:27:21.894Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a0f99d08-2356-4c5f-8032-9747d6b5ed37",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "609265dd-d09b-4f46-bdff-6dbfcb234dce",
+            "name": "/",
+            "url": "{{url}}/movies?limit=10&page=1&search=the&sortBy=releasedAt&sortOrder=descending",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-10-24T08:23:45.413Z",
+            "modified": "2023-10-24T08:26:50.665Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "the",
+                    "isPath": false
+                },
+                {
+                    "name": "sortBy",
+                    "value": "releasedAt",
+                    "isPath": false
+                },
+                {
+                    "name": "sortOrder",
+                    "value": "descending",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0a1c1443-f344-4d7f-8a68-353bf27ca129",
+            "colId": "9b52b364-e932-41ad-a46a-40cad3db98d6",
+            "containerId": "609265dd-d09b-4f46-bdff-6dbfcb234dce",
+            "name": "/:movieId",
+            "url": "{{url}}/movies/65377ed9957a50d2e91b75da",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2023-10-24T08:28:54.029Z",
+            "modified": "2023-10-24T08:30:10.248Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": " {\n    \"name\": \"Hidden Realms.\",\n    \"rating\": 7.8,\n    \"casts\": [\"Scarlett Johansson\", \"Tom Hardy\", \"Liam Hemsworth.\"],\n    \"genre\": \"Fantasy/Adventure/\",\n    \"releasedAt\": \"2022-04-07\"\n  }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ"
+            },
+            "tests": []
+        }
+    ]
+}

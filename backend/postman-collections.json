@@ -1,0 +1,276 @@
+{
+    "info": {
+        "_postman_id": "b13314b3-ea66-4d5e-9f1e-bdeb41e85555",
+        "name": "Interview Movies",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Aman Raj\",\n  \"email\": \"aman@test.com\",\n  \"password\": \"123\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhakB0ZXN0LmNvbSIsImhhc2giOiI4YjE3MjAzYTI2IiwiaWF0IjoxNjk4MTM0NzA1fQ.1BAklnHFWmZemukGBxRUTYJ2riQHjI3YTCNFe5QoMkA",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{url}}/users",
+                            "path": [
+                                "users"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Raj Aryan\",\n  \"_email\": \"raj@test.com\",\n  \"_password\": \"123\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhakB0ZXN0LmNvbSIsImhhc2giOiI4YjE3MjAzYTI2IiwiaWF0IjoxNjk4MTM0ODk3fQ.DnkW4i_rI63_50NfaTLO3r2YD3HkrBFnEK4rcx1Ilpk",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "/login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/auth/login",
+                            "path": [
+                                "auth",
+                                "login"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"aman@test.com\",\n  \"password\": \"123\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Movies",
+            "item": [
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{url}}/movies",
+                            "path": [
+                                "movies"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": " {\r\n    \"name\": \"Hidden Realms\",\r\n    \"rating\": 7.6,\r\n    \"casts\": [\"Scarlett Johansson\", \"Tom Hardy\", \"Liam Hemsworth\"],\r\n    \"genre\": \"Fantasy/Adventure\",\r\n    \"releasedAt\": \"2022-04-07\"\r\n  }"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{url}}/movies?limit=10&page=1&search=the&sortBy=releasedAt&sortOrder=descending",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "10"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "the"
+                                },
+                                {
+                                    "key": "sortBy",
+                                    "value": "releasedAt"
+                                },
+                                {
+                                    "key": "sortOrder",
+                                    "value": "descending"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "movies"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/:movieId",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{url}}/movies/65377ed9957a50d2e91b75da",
+                            "path": [
+                                "movies",
+                                "65377ed9957a50d2e91b75da"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "/:movieId",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{url}}/movies/65377ed9957a50d2e91b75da",
+                            "path": [
+                                "movies",
+                                "65377ed9957a50d2e91b75da"
+                            ],
+                            "host": [
+                                "{{url}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": " {\n    \"name\": \"Hidden Realms.\",\n    \"rating\": 7.8,\n    \"casts\": [\"Scarlett Johansson\", \"Tom Hardy\", \"Liam Hemsworth.\"],\n    \"genre\": \"Fantasy/Adventure/\",\n    \"releasedAt\": \"2022-04-07\"\n  }"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYW5AdGVzdC5jb20iLCJoYXNoIjoiOGIxNzIwM2EyNiIsImlhdCI6MTY5ODEzNTY0M30.igbQzOjwo-7N5-O6uOS6CHLnN44ihlindw-06j618hQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
